@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="windows-1251"?>
+<!--  This file conforms to the DTD xdc/bld/build.dtd -->
+<package name="configPkg" version="" producerId="undefined">
+    <units>
+    </units>
+    <sources>
+        <srcFile name="package/cfg/app_pa9fg.c"/>
+    </sources>
+    <configscripts>
+        <srcFile name="C:/WorkspaceRaptor/RTest_EEPROM/BiosConfig/app.cfg"/>
+    </configscripts>
+    <makefiles>
+        <srcFile name="package.mak" src="package.bld"/>
+        <srcFile name="package/package.xdc.dep" src="package.xdc"/>
+        <srcFile name="package/cfg/app_pa9fg.mak" src="package.bld"/>
+        <srcFile name="package/cfg/app_pa9fg.oa9fg.dep" src="package/cfg/app_pa9fg.c"/>
+        <srcFile name="package/cfg/app_pa9fg.dep" src="package/cfg/app_pa9fg.cfg"/>
+        <srcFile name="package/cfg/app.xa9fg.mak" src="package.bld"/>
+        <srcFile name="package/rel/configPkg.tar.dep" src="package/rel/configPkg.xdc.inc"/>
+    </makefiles>
+    <targets>
+        <target name="gnu.targets.arm.A9F"
+            version="gnu.targets.arm.A9F{1,0,7.2,1"
+            rawVersion="7.2.1"
+            platform="ti.platforms.sdp4430"
+            isa="v7A9"
+            suffix="a9fg"
+            rootDir="C:/ti/ccs1020/ccs/tools/compiler/gcc-arm-none-eabi-7-2017-q4-major-win32"
+            os="undefined"
+            rts="gnu.targets.arm.rtsv7A">
+            <model endian="little"
+                codeModel="undefined"
+                dataModel="undefined"/>
+        </target>
+    </targets>
+    <libraries>
+    </libraries>
+    <configurations>
+    <configuration name="app"
+        pname="app.pa9fg"
+        target="gnu.targets.arm.A9F"
+        platform="AM437xBB"
+        profile="release"
+        isPartial="false"
+        xCfgScript="package/cfg/app_pa9fg.cfg"
+        xCfgPrefix="package/cfg/app_pa9fg"
+        cfgScript="C:/WorkspaceRaptor/RTest_EEPROM/BiosConfig/app.cfg"
+        cfgArgs="null"
+        />
+    </configurations>
+    <executables>
+    <executable name="app"
+        pname="app.xa9fg"
+        target="gnu.targets.arm.A9F"
+        platform="AM437xBB"
+        profile="release"
+        xCfgScript="package/cfg/app_pa9fg.cfg"
+        xCfgPrefix="package/cfg/app_pa9fg"
+        cfgScript="C:/WorkspaceRaptor/RTest_EEPROM/BiosConfig/app.cfg"
+        cfgArgs="null"
+        />
+    </executables>
+    <tests>
+    <test exeName="app.xa9fg"
+        args=""
+        groupName="app.xa9fg"
+        refOutput="undefined"
+        refExitCode="0"
+        execArgs=""
+        />
+    </tests>
+    <releases relDir="package/rel/">
+    <release name="configPkg"
+        pname="configPkg.tar"
+        label="default"
+    >
+        <file name="package/package.bld.xml"/>
+        <file name="package/build.cfg"/>
+        <file name="package/package.xdc.inc"/>
+    </release>
+    </releases>
+    <repositories>
+    </repositories>
+</package>

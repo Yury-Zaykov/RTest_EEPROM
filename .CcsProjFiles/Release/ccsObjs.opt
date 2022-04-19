@@ -1,0 +1,1 @@
+"./IO_UART.o" "./main.o" "./Src-AM437x_HW/AM437xBB_Console.o" "./Src-AM437x_HW/AM437x_I2C.o" "./Src-AM437x_HW/AM437x_MMU.o" "./Src-AM437x_HW/AM437x_PWMSS.o" "./Src-AM437x_HW/AM437x_UART.o" -Wl,-T"configPkg/linker.cmd" -Wl,--start-group -lgcc -lm -lnosys -lstdc++ -lc -Wl,--end-group 
